@@ -1,0 +1,36 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enkripsi dan Dekripsi</title>
+    <link rel="stylesheet" href="static\css\styles.css">
+</head>
+<body>
+    <h1>Enkripsi dan Dekripsi</h1>
+    <form method="POST" enctype="multipart/form-data" class="form-key">
+        <label for="key">Masukkan Kunci (minimal 12 karakter):</label>
+        <input type="text" name="key" id="key" required minlength="12">
+        
+        <label for="cipher">Pilih Cipher:</label>
+        <select name="cipher" id="cipher">
+            <option value="vigenere">Vigenere</option>
+            <option value="playfair">Playfair</option>
+            <option value="hill">Hill</option>
+        </select>
+        
+        <label for="action">Pilih Aksi:</label>
+        <select name="action" id="action">
+            <option value="encrypt">Enkripsi</option>
+            <option value="decrypt">Dekripsi</option>
+        </select>
+        
+        <label for="file">Upload File (.txt):</label>
+        <input type="file" name="file" id="file">
+
+        <label for="text">Atau Masukkan Teks:</label>
+        <textarea name="text" id="text"></textarea>
+        
+        <button type="submit">Proses</button>
+    </form>
+</body>
+</html>
